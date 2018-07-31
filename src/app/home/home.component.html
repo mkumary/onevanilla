@@ -1,0 +1,93 @@
+<div id="brandCarousel" class="container-fluid collapse-padding" style="background-image: url('https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/OneV_HERO_050317.jpg')" data-ride="carousel">
+
+  <div id="aboveCarouselInfo" class="container-padding collapse-padding-xs collapse-padding-sm horizontal-spacing-xs-2 max-width-970">
+
+    <div class="col-xs-12 col-sm-8 col-sm-push-2 col-md-push-0 col-md-5 collapse-padding-xs collapse-padding-sm vertical-spacing-4 collapse-margin-xs-bottom loginFormBlock">
+      <!-- start manage your card form -->
+
+
+      <div class="dividerBorderAround">
+        <div class="formContent brandLoginInfoModule dividerModule clearfix ">
+          <form action="./loginCard.html" method="post" commandname="cardCommand" id="brandLoginForm" name="brandLoginForm" class="card well collapse-margin-xs-bottom collapse-padding" autocomplete="off">
+            <input name="csrfToken" type="hidden" value="BXY7z39yZYqKXjgQfvasSl4myD4x1ZTV" style="display:none">
+
+            <div class="fontPN font15px20pxlh font-bold font-color-darkgrey vertical-padding-bottom-2 vertical-padding-top-2 horizontal-padding-2">Manage Your OneVanilla Card</div>
+            <div class="fontPN font20px27pxlh font-color-darkgrey vertical-padding-bottom-2 vertical-padding-top-2 horizontal-padding-4"><p>Access your account and check your balance</p>
+            </div>
+
+            <div class="horizontal-padding-4">
+              <div class="form-group">
+                <label class="fontPN font15px20pxlh font-bold font-color-darkgrey" for="cardnumber">Card Number</label>
+                <input type="text" name="cardNumber" placeholder="16 digits, no spaces" class="form-control fontPN font13px" id="cardNumber" minlength="15" maxlength="16" mandatory="true" data-code="110">
+              </div>
+              <div class="row">
+                <div class="col-xs-7 col-sm-7 col-md-7 collapse-padding-right">
+                  <label class="fontPN font15px20pxlh font-bold font-color-darkgrey" for="expiration">EXPIRATION DATE</label>
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 expMM">
+                      <div class="form-group">
+                        <input type="text" name="expMonth" size="2" minlength="2" maxlength="2" placeholder="MM" class="form-control fontPN font13px" id="expMonth" mandatory="true" data-code="120">
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 expYY">
+                      <div class="form-group">
+                        <input type="text" name="expYear" size="4" minlength="2" maxlength="2" placeholder="YY" class="form-control fontPN font13px" id="expYear" mandatory="true" data-code="120">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-5 col-sm-5 col-md-5 collapse-padding-right expCVV">
+                  <div class="form-group">
+                    <label class="fontPN font15px20pxlh font-bold font-color-darkgrey" for="cvv">CVV</label>
+
+                    <span class="hint--right hoverTip preview" data-image="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/OneVanilla_CardBack_MC.png"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/tooltip.png" class="img" alt="Preview"></span>
+
+                    <input type="text" name="cvv" placeholder="3 digits" size="4" maxlength="3" minlength="3" class="form-control fontPN font13px" id="cvv" mandatory="true" data-code="115">
+                  </div>
+                </div>
+                <!--CAPTCHA has been Implemented but turned off, until development deems needed. REMOVE HIDE/HIDDEN TO VIEW -->
+                <div id="cc-info" class="col-xs-4 col-sm-4 col-md-4 captchadiv hide hidden">
+                  <label class="fontOS font-bold font13px font-color-darkgrey"><span class="star">*</span> The characters do not match the image below.</label>
+                  <br>
+                  <div class="row">
+                    <img src="./stickyImg" border="0" class="captcha">
+                    <br>
+                    <input type="text" name="response" id="response" value="" autocomplete="off" minlength="1" maxlength="5" cssclass="input_2 inputbox sensitive" mandatory="true" data-code="340" placeholder="">
+                  </div>
+                </div>
+                <!--CAPTCHA has been Implemented but turned off, until development deems needed. REMOVE HIDE/HIDDEN TO VIEW -->
+                <div class="col-xs-12 col-sm-12 col-md-12 vertical-spacing-bottom-4">
+                  <button type="submit" class="btn btn-primary blue btn-block btn-md" id="brandLoginForm_button">Sign In </button>
+                </div>
+              </div>
+              <!--<div class="row vertical-spacing-bottom-2 text-center helpLinks">
+                  <div class="col-xs-6 text-right horizontal-padding-right-1"><a href="./faq.html" class="SSLink fontOS font14px font-color-darkgrey text-underline">Lost your Card?</a></div><div class="col-xs-6 text-left collapse-padding">&nbsp;|&nbsp;<a href="./faq.html" class="text-left horizontal-padding-left-1 SSLink fontOS font14px font-color-darkgrey text-underline">Need Help?</a></div>
+              </div>-->
+            </div>
+          </form>
+          <div class="col-xs-12 collapse-margin-bottom vertical-padding-2 SSLink fontPN font14px" id="brandLoginFormFooterInfo"><p>Want to buy a OneVanilla Card? View a list of <a href="./whereToBuy.html?csrfToken=BXY7z39yZYqKXjgQfvasSl4myD4x1ZTV">OneVanilla retailers</a>.</p>
+          </div>
+        </div>
+      </div>
+      <!-- end manage your card form -->
+    </div>
+
+    <div class="col-xs-12 col-md-6 carouselText vertical-spacing-md-8 vertical-spacing-lg-8 vertical-padding-xs-4 vertical-padding-sm-4 horizontal-padding-left-4">
+
+
+
+
+      <h1 class="fontRS font44px48pxlh font-bold font-color-darkblue"></h1>
+      <p class="fontRS font24px28pxlh font-color-darkblue"></p>
+
+
+
+    </div>
+  </div>
+  <div class="mobileSliderImage visible-xs visible-sm hidden-md hidden-lg">
+
+    <img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/OneV_HERO_050317.jpg">
+
+  </div>
+
+</div>

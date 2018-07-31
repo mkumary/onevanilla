@@ -1,3 +1,90 @@
-<p>
-  nav-bar works!
-</p>
+<!-- start main navigation -->
+<div class="top-bar">
+  <div class="container" id="mainNavigation">
+    <div class="max-width-970">
+      <div class="col-xs-12 col-md-3 topMenuLogoBrand">
+        <a routerLink="./home.html?csrfToken=ki4L5plLbG92VuZR6AURsnJNh1EvmhNv">
+          <img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/icon_US_OneV.png" id="red_logo" class="hidden-xs hidden-sm">
+        </a>
+      </div>
+      <div class="col-md-9 collapse-padding-right navContainer">
+        <a routerLink="./home.html?csrfToken=ki4L5plLbG92VuZR6AURsnJNh1EvmhNv">
+          <img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/OneV_logo_mobile.png" id="text_logo" class="visible-phone">
+        </a>
+        <ul class="navigation  hidden-xs hidden-sm" id="topNavigation">
+          <li class="public retailLocationLink lineSeperator"><a routerLink="./home" class=" fontPN font-bold font13px18pxlh font-color-white">Sign In</a></li>
+          <li class="both retailLocationLink lineSeperator"><a routerLink="./where-to-buy" class=" fontPN font-bold font13px18pxlh font-color-white">Retail Locations</a></li>
+          <li class="addToMenu lineSeperator">
+            <img class="flag Chosen hide" src="/static/images/icons/flagIconUS.png" alt="US">
+            <a href="./languageChange.html?lang=en&amp;csrfToken=ki4L5plLbG92VuZR6AURsnJNh1EvmhNv" class="active fontPN font13px18pxlh font-color-white" id="en"> English</a>
+          </li>
+          <li class="addToMenu lineSeperator">
+            <a href="./languageChange.html?lang=es&amp;csrfToken=ki4L5plLbG92VuZR6AURsnJNh1EvmhNv" class="inactive fontPN font13px18pxlh font-color-white" id="es"> Español</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end main navigation -->
+
+
+<!-- start sub navigation -->
+
+<script>
+    $(document).ready(function(){
+        var Page = 'whereToBuy';
+        //var myPage = "";
+        $( ".navigationMain > li" ).each(function() {
+            if(Page===this.id){
+                $(this).addClass('active');
+            }
+        });
+    });
+</script>
+
+<div class="container navContainer" id="subNavigation">
+  <div class="max-width-970">
+    <div class="col-xs-12 col-md-3 vertical-padding-3 subMenuLogoBrand">
+      <a routerLink="./home">
+        <img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_logo_main_US.png" id="red_logo" class="hidden-xs hidden-sm">
+      </a>
+    </div>
+    <div class="hidden-sm col-md-9 hidden-xs collapse-padding-right navContainer">
+      <ul class="navigation" id="navigationMain">
+        <!-- eliminating aboutYourCard View in when page is loading display
+        only after user Logged in. -->
+        <li class="hidden-md hidden-lg off">
+          <a routerLink="/home" class="off fontPN font14px9pxlh font-color-brandcolor">Home</a>
+        </li>
+        <!-- eliminating aboutYourCard View in when page is loading display
+        only after user Logged in. -->
+        <!-- eliminating aboutYourCard View in when page is loading display
+        only after user Logged in. -->
+        <li class="show off">
+          <a routerLink="/using-your-card" class="off fontPN font14px9pxlh font-color-brandcolor">Using Your Card</a>
+        </li>
+        <!-- eliminating aboutYourCard View in when page is loading display
+        only after user Logged in. -->
+        <li class="show off">
+          <a routerLink="/try-my-vanilla" class="off fontPN font14px9pxlh font-color-brandcolor">Try MyVanilla</a>
+        </li>
+        <!-- eliminating aboutYourCard View in when page is loading display
+        only after user Logged in. -->
+        <li class="notLoginView active">
+          <a routerLink="/where-to-buy" class="active fontPN font14px9pxlh font-color-brandcolor">Where to Buy</a>
+        </li>
+        <!-- eliminating aboutYourCard View in when page is loading display
+        only after user Logged in. -->
+        <li class="show off">
+          <a routerLink="/faq" class="off fontPN font14px9pxlh font-color-brandcolor">Help</a>
+        </li>
+        <!-- eliminating aboutYourCard View in when page is loading display
+        only after user Logged in. -->
+      </ul>
+    </div>
+
+  </div>
+  <!-- end sub navigation -->
+
+</div>
