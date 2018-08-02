@@ -11,6 +11,8 @@ import { TryMyVanillaComponent } from './try-my-vanilla/try-my-vanilla.component
 import { FaqComponent } from './faq/faq.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { AccordionItemComponent } from './accordion-item/accordion-item.component';
+import { FaqAccordionsComponent } from './faq-accordions/faq-accordions.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { FooterComponent } from './footer/footer.component';
     TryMyVanillaComponent,
     FaqComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AccordionItemComponent,
+    FaqAccordionsComponent
   ],
   imports: [
     BrowserModule,
