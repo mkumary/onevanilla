@@ -1,0 +1,39 @@
+<div *ngFor='let item of $data; let i = index;'>
+  <!--FAQ Category 1 Begin-->
+  <div class="faqHeader"></div>
+  <!--Start Accordion List Parent-->
+  <div  class="accordionsFAQ">
+
+    <div class="heading">
+      <h4 class="title fontMS font20px28pxlh font-bold font-color-colorbrand10 font-bold">
+        <a data-toggle="collapse" data-parent="#accordionsFAQ" href="#faq{{i}}" class="accordion-toggle">
+          {{item.heading}}
+        </a>
+      </h4>
+    </div>
+    <div id="faq{{i}}" class="faq-collapse collapse">
+      <div class="panel-body">
+
+        <!-- Here is nested accordion sub-accordions-->
+        <div class="faq-group" id="faq{{i}}">
+          <div class="panel panel-default" *ngFor='let panel of item.subPanels; let j=index;'>
+            <div class="panel-heading">
+              <h4 class="panel-title fontPN font20px24pxlh font-color-darkgrey ">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseInner">
+                  {{panel.panelHeading}}
+                </a>
+              </h4>
+            </div>
+            <div id="collapseInner" class="panel-collapse collapse">
+              <div class="panel-body fontPN font15px23pxlh font-color-darkgrey horizontal-spacing-3">
+                <p>{{panel.panelBody}}</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Here is nested accordion sub-accordions-->
+
+      </div>
+    </div>
+</div>
