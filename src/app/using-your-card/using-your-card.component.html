@@ -1,271 +1,140 @@
 <div class="pageContentWrapper not_signed_in  ">
-  <div class="container max-width-940 " id="brand-contentCardArea">
-    <div id="usingYourCard" class="col-xs-12 SSaccountHeader Template info-pages">
+    <div class="container max-width-940 " id="brand-contentCardArea">
+        <div id="usingYourCard" class="col-xs-12 SSaccountHeader Template info-pages">
 
-      <div class="body_content_header">
-        <h1 class=" SSH1 fontMS font40px44pxlh font-light">Using Your Card</h1>
-
-
-        <h4 class="fontMS font-bold font18px21pxlh font-color-darkblue">Get the most out of your OneVanilla Card</h4>
+            <div class="body_content_header">
+                <h1 class=" SSH1 fontMS font40px44pxlh font-light">Using Your Card</h1>
 
 
-        <p>OneVanilla Card is the perfect prepaid card for everyday spending nationwide. Learn how you can use your card for online shopping, dining out, paying for gas and more.</p>
+                <h4 class="fontMS font-bold font18px21pxlh font-color-darkblue">Get the most out of your OneVanilla
+                    Card</h4>
 
-        <div class="col-xs-12 collapse-padding">
+
+                <p>OneVanilla Card is the perfect prepaid card for everyday spending nationwide. Learn how you can use
+                    your card for online shopping, dining out, paying for gas and more.</p>
+
+                <div class="col-xs-12 collapse-padding">
 
 
-          <!-- Nav tabs -->
-          <ul class="nav nav-tabs UsingYourCard visible-md visible-sm  visible-xs visible-lg" role="tablist">
-            <li role="presentation" class="active visible-md visible-sm  visible-xs visible-lg">
-              <a href="#features" aria-controls="features" role="tab" data-toggle="tab" class="fontMS font16px24pxlh font-bold">Features</a>
-            </li>
-            <li role="presentation" class="visible-md visible-sm visible-xs visible-lg">
-              <a href="#howtouse" aria-controls="howtouse" role="tab" data-toggle="tab" class="fontMS font16px24pxlh font-bold">
-                How to Use</a>
-            </li>
-            <li role="presentation" class="visible-md visible-sm  visible-xs visible-lg"><a href="#tips" aria-controls="tips" role="tab" data-toggle="tab" class="fontMS font16px24pxlh font-bold">
-              Tips</a></li>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs UsingYourCard visible-md visible-sm  visible-xs visible-lg" role="tablist">
+                        <li role="presentation"   class="active visible-md visible-sm  visible-xs visible-lg">
+                            <a href="#features" aria-controls="features" role="tab" data-toggle="tab"
+                               class="fontMS font16px24pxlh font-bold">Features</a>
+                        </li>
+                        <li role="presentation" class="  visible-md visible-sm visible-xs visible-lg">
+                            <a href="#howtouse" aria-controls="howtouse" role="tab" data-toggle="tab"
+                               class="fontMS font16px24pxlh font-bold">
+                                How to Use</a>
+                        </li>
+                        <li role="presentation" class=" visible-md visible-sm  visible-xs visible-lg"><a href="#tips"
+                                                                                                        aria-controls="tips"
+                                                                                                        role="tab"
+                                                                                                        data-toggle="tab"
+                                                                                                        class="fontMS font16px24pxlh font-bold">
+                            Tips</a>
+                        </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active columns-2 tabFeatures" id="features">
 
-          </ul>
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active columns-2 tabFeatures" id="features">
 
-              <div class="columnContent">
-                <div class="bordered">
-                  <div class="text-center icon" style="margin-bottom:12px"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_DoNot.png" alt=""></div>
-                  <span class="fontPN font15px20pxlh font-color-darkgrey"><p>Your OneVanilla Card does not have ATM access, and it cannot be used to get cash back at the point of sale.</p>
-</span>
+                            <div *ngFor="let item of $features" class="columnContent">
+                                <div class="bordered">
+                                    <div class="text-center icon" style="margin-bottom:12px">
+                                        <img src="{{item.img}}" alt="">
+                                    </div>
+                                    <span class="fontPN font15px20pxlh font-color-darkgrey">
+                                        <p>{{item.info}}</p>
+                                        <p *ngIf="item.note"><span style="font-size:10px">{{item.note}}</span></p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane tabHowToUse" id="howtouse"><!--Start each HowtoUse box-->
+
+                            <div *ngFor="let item of $howToUse.phone" class="bordered fullwidth">
+                                <div  class="col-md-12 collapse-padding-xs collapse-padding-sm">
+                                    <div class="col-md-4 col-xs-12 text-center iconImage">
+                                        <h3 *ngIf="item.title" class="title collapse-margin-top fontMS font-bold font13px text-left">{{item.title}}</h3>
+
+                                        <div class="icon">
+                                            <img src="{{item.img}}" alt="{{item.alt}}" border="0">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 col-xs-12 collapse-padding-xs collapse-padding-sm vertical-padding-top-1">
+                                        <span class="fontMS font20px24pxlh font-bold">{{item.subTitle}}</span>
+                                        <span class="fontPN font15px23pxlh font-color-darkgrey"><p>{{item.info}}</p></span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="bordered fullwidth">
+                                <div *ngFor="let item of $howToUse.inStore" class="col-md-12 collapse-padding-xs collapse-padding-sm">
+                                    <div class="col-md-4 col-xs-12 text-center iconImage">
+
+                                        <h3 *ngIf="item.title" class="title collapse-margin-top fontMS font-bold font13px text-left">
+                                            {{item.title}}</h3>
+
+                                        <div class="icon"><img
+                                                src="{{item.img}}"
+                                                alt="{{item.alt}}" border="0"></div>
+                                    </div>
+                                    <div class="col-md-8 col-xs-12 collapse-padding-xs collapse-padding-sm vertical-padding-top-1">
+                                        <span class="fontMS font20px24pxlh font-bold">{{item.subTitle}}</span>
+                                        <span class="fontPN font15px23pxlh font-color-darkgrey">
+                                            <p *ngIf="item.info1">{{item.info1}}</p>
+                                            <p *ngIf="item.info2"><span style="line-height: 1.6em;">{{item.info2}}</span></p>
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="bordered fullwidth">
+
+                                <div *ngFor="let item of $howToUse.online" class="col-md-12 collapse-padding-xs collapse-padding-sm">
+                                    <div class="col-md-4 col-xs-12 text-center iconImage">
+
+                                        <h3 *ngIf="item.title" class="title collapse-margin-top fontMS font-bold font13px text-left">{{item.title}}</h3>
+
+                                        <div class="icon"><img
+                                                src="{{item.img}}"
+                                                alt="{{item.alt}}" border="0"></div>
+                                    </div>
+                                    <div class="col-md-8 col-xs-12 collapse-padding-xs collapse-padding-sm vertical-padding-top-1">
+                                        <span class="fontMS font20px24pxlh font-bold">{{item.subTitle}}</span>
+                                        <span class="fontPN font15px23pxlh font-color-darkgrey"><p>{{item.info}}</p></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End each HowtoUse box-->
+                        <div role="tabpanel" class="tab-pane columns-2 tabTips" id="tips">
+
+                            <div *ngFor="let item of $howToUse.online" class="columnContent">
+                                <div class="bordered">
+                                    <div class="text-center icon"><img
+                                            src="{{item.img}}"
+                                            alt="{{item.alt}}"></div>
+                                    <span class="fontMS font20px24pxlh font-color-darkblue tipSubhead vertical-spacing-bottom-1 font-bold">{{item.subTitle}}</span>
+                                    <span class="fontPN font15px23pxlh font-color-darkgrey">
+                                        <p *ngIf="item.info1">{{item.info1}}</p>
+                                        <p *ngIf="item.info2"><span style="line-height: 1.6em;">{{item.info2}}</span></p>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-              </div>
-
-              <div class="columnContent">
-                <div class="bordered">
-                  <div class="text-center icon" style="margin-bottom:12px"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_NoFees.png" alt=""></div>
-                  <span class="fontPN font15px20pxlh font-color-darkgrey"><p>No fees after purchase – Spend your money on what counts.</p>
-</span>
-                </div>
-              </div>
-
-              <div class="columnContent">
-                <div class="bordered">
-                  <div class="text-center icon" style="margin-bottom:12px"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_Nationwide.png" alt=""></div>
-                  <span class="fontPN font15px20pxlh font-color-darkgrey"><p>Use wherever Debit MasterCard or Visa debit cards&nbsp;are accepted in the U.S. and District of Columbia, as applicable.</p>
-</span>
-                </div>
-              </div>
-
-              <div class="columnContent">
-                <div class="bordered">
-                  <div class="text-center icon" style="margin-bottom:12px"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_NoPersInfo.png" alt=""></div>
-                  <span class="fontPN font15px20pxlh font-color-darkgrey"><p>No personal information or credit* check required.</p>
-
-<p><span style="font-size:10px">*This is not a credit card.</span></p>
-</span>
-                </div>
-              </div>
-
             </div>
-            <div role="tabpanel" class="tab-pane tabHowToUse" id="howtouse"><!--Start each HowtoUse box-->
 
-              <div class="bordered fullwidth">
 
-
-
-
-
-                <div class="col-md-12 collapse-padding-xs collapse-padding-sm">
-                  <div class="col-md-4 col-xs-12 text-center iconImage">
-
-                    <h3 class="title collapse-margin-top fontMS font-bold font13px text-left">Phone</h3>
-
-                    <div class="icon"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_PhoneEmail.png" alt="Use for phone and mail order" border="0"></div>
-                  </div>
-                  <div class="col-md-8 col-xs-12 collapse-padding-xs collapse-padding-sm vertical-padding-top-1">
-                    <span class="fontMS font20px24pxlh font-bold">Use for phone and mail order</span>
-                    <span class="fontPN font15px23pxlh font-color-darkgrey"><p>You can use your card to make purchases over the phone or through mail order.&nbsp;Accepted at locations&nbsp;in the U.S. and District of&nbsp;Columbia everywhere Debit MasterCard or Visa debit cards are&nbsp;accepted.</p>
-</span>
-                  </div>
-
-                </div>
-
-              </div>
-
-
-              <div class="bordered fullwidth">
-
-
-
-
-
-                <div class="col-md-12 collapse-padding-xs collapse-padding-sm">
-                  <div class="col-md-4 col-xs-12 text-center iconImage">
-
-                    <h3 class="title collapse-margin-top fontMS font-bold font13px text-left">In-Store</h3>
-
-                    <div class="icon"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_PresentCard.png" alt="Use in-store" border="0"></div>
-                  </div>
-                  <div class="col-md-8 col-xs-12 collapse-padding-xs collapse-padding-sm vertical-padding-top-1">
-                    <span class="fontMS font20px24pxlh font-bold">Present Your Card</span>
-                    <span class="fontPN font15px23pxlh font-color-darkgrey"><p>Give your card to the cashier when making a purchase.</p>
-
-<p><span style="line-height: 1.6em;">Be sure to know your balance before you shop.</span></p>
-</span>
-                  </div>
-
-                </div>
-
-                <div class="col-md-12 collapse-padding-xs collapse-padding-sm">
-                  <div class="col-md-4 col-xs-12 text-center iconImage">
-
-                    <div class="icon"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_SelectSign.png" alt="" border="0"></div>
-                  </div>
-                  <div class="col-md-8 col-xs-12 collapse-padding-xs collapse-padding-sm vertical-padding-top-1">
-                    <span class="fontMS font20px24pxlh font-bold">Select and Sign</span>
-                    <span class="fontPN font15px23pxlh font-color-darkgrey"><p>Finalize your purchase as a Signature transaction. Select “Credit” and sign the receipt.</p>
-
-<p><span style="line-height: 1.6em;">Sign in to your online account to view all transactions.</span></p>
-</span>
-                  </div>
-
-                </div>
-
-                <div class="col-md-12 collapse-padding-xs collapse-padding-sm">
-                  <div class="col-md-4 col-xs-12 text-center iconImage">
-
-                    <div class="icon"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_PIN.png" alt="" border="0"></div>
-                  </div>
-                  <div class="col-md-8 col-xs-12 collapse-padding-xs collapse-padding-sm vertical-padding-top-1">
-                    <span class="fontMS font20px24pxlh font-bold">Debit Option</span>
-                    <span class="fontPN font15px23pxlh font-color-darkgrey"><p>You can also finalize your purchase as a Debit transaction. Simply choose “Debit” and enter your PIN.</p>
-
-<p><span style="line-height: 1.6em;">Sign in to your account to set or clear your card PIN.</span></p>
-</span>
-                  </div>
-
-                </div>
-
-              </div>
-
-
-              <div class="bordered fullwidth">
-
-
-
-
-
-                <div class="col-md-12 collapse-padding-xs collapse-padding-sm">
-                  <div class="col-md-4 col-xs-12 text-center iconImage">
-
-                    <h3 class="title collapse-margin-top fontMS font-bold font13px text-left">Online</h3>
-
-                    <div class="icon"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_AssignZIP.png" alt="Assign a ZIP Code to your card" border="0"></div>
-                  </div>
-                  <div class="col-md-8 col-xs-12 collapse-padding-xs collapse-padding-sm vertical-padding-top-1">
-                    <span class="fontMS font20px24pxlh font-bold">Assign a ZIP Code</span>
-                    <span class="fontPN font15px23pxlh font-color-darkgrey"><p>Some retailers use ZIP Codes as a checkout security feature. To assign a ZIP Code to your Card, sign in to your account and select Manage Card. The "Assign ZIP Code" page allows you to register your ZIP Code for the first time or update an existing ZIP Code</p>
-</span>
-                  </div>
-
-                </div>
-
-                <div class="col-md-12 collapse-padding-xs collapse-padding-sm">
-                  <div class="col-md-4 col-xs-12 text-center iconImage">
-
-                    <div class="icon"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_ShopOnlineStore.png" alt="Shop online" border="0"></div>
-                  </div>
-                  <div class="col-md-8 col-xs-12 collapse-padding-xs collapse-padding-sm vertical-padding-top-1">
-                    <span class="fontMS font20px24pxlh font-bold">Checkout</span>
-                    <span class="fontPN font15px23pxlh font-color-darkgrey"><p>At checkout, simply enter your card information in the Payment Method fields. Use your mailing address when shopping online. This will ensure that you can be contacted by the merchant, if a problem arises.</p>
-</span>
-                  </div>
-
-                </div>
-
-                <div class="col-md-12 collapse-padding-xs collapse-padding-sm">
-                  <div class="col-md-4 col-xs-12 text-center iconImage">
-
-                    <div class="icon"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_Nationwide.png" alt="Nationwide Online Use" border="0"></div>
-                  </div>
-                  <div class="col-md-8 col-xs-12 collapse-padding-xs collapse-padding-sm vertical-padding-top-1">
-                    <span class="fontMS font20px24pxlh font-bold">Nationwide Online Use</span>
-                    <span class="fontPN font15px23pxlh font-color-darkgrey"><p>You can use your OneVanilla Card at online merchants based inside the United States and District of Columbia where Debit MasterCard or&nbsp;Visa debit cards are accepted, as applicable.</p>
-</span>
-                  </div>
-
-                </div>
-
-              </div>
-
-
-            </div>
-            <!--End each HowtoUse box-->
-
-            <div role="tabpanel" class="tab-pane columns-2 tabTips" id="tips">
-
-              <div class="columnContent">
-                <div class="bordered">
-                  <div class="text-center icon"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_PayAtPump.png" alt="Paying at the Pump"></div>
-                  <span class="fontMS font20px24pxlh font-color-darkblue tipSubhead vertical-spacing-bottom-1 font-bold">Paying at the Pump</span>
-                  <span class="fontPN font15px23pxlh font-color-darkgrey">
-                    <p>When paying at the pump, most gas stations will put a $100 hold on your card to ensure that you have sufficient funds. So, make sure you know your balance. To avoid the hold, pay the cashier inside.</p>
-
-                  </span></div>
-              </div>
-
-              <div class="columnContent">
-                <div class="bordered">
-                  <div class="text-center icon"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_SplitTrans.png" alt="Using two forms of payment"></div>
-                  <span class="fontMS font20px24pxlh font-color-darkblue tipSubhead vertical-spacing-bottom-1 font-bold">Using two forms of payment</span>
-                  <span class="fontPN font15px23pxlh font-color-darkgrey" ><p>If you need to make a purchase that is greater than the amount on your card, most retailers will allow you to use a second payment method – cash, check, credit card or debit card – for the difference.</p>
-
-                  <p><span style="line-height: 1.6em;">Not all merchants accept split transactions and some merchants may require that you pay for the remaining balance with cash. Be sure to check with the merchant.&nbsp;</span></p>
-
-                  </span></div>
-              </div>
-
-              <div class="columnContent">
-                <div class="bordered">
-                  <div class="text-center icon"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_Tipping.png" alt="Tipping with your card"></div>
-                  <span class="fontMS font20px24pxlh font-color-darkblue tipSubhead vertical-spacing-bottom-1 font-bold">Tipping with your Card</span>
-                  <span class="fontPN font15px23pxlh font-color-darkgrey"><p>Restaurants, hair salons, spas and some other types of merchants may place a hold on your Card equal to the total service bill plus up to 20%, in anticipation of you leaving a tip. So, be sure to know your balance.</p>
-
-                  </span></div>
-              </div>
-
-              <div class="columnContent">
-                <div class="bordered">
-                  <div class="text-center icon"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_BillPay.png" alt="Paying Bills Online"></div>
-                  <span class="fontMS font20px24pxlh font-color-darkblue tipSubhead vertical-spacing-bottom-1 font-bold">Paying Bills Online</span>
-                  <span class="fontPN font15px23pxlh font-color-darkgrey"><p>OneVanilla is a simple, safe and convenient method of making online bill payments.</p>
-
-                  </span></div>
-              </div>
-
-              <div class="columnContent">
-                <div class="bordered">
-                  <div class="text-center icon"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_ShopOnlineStore.png" alt="Shop Online and In-store"></div>
-                  <span class="fontMS font20px24pxlh font-color-darkblue tipSubhead vertical-spacing-bottom-1 font-bold">Shop Online and In-store</span>
-                  <span class="fontPN font15px23pxlh font-color-darkgrey" ><p>Before you shop online using your OneVanilla Card, be sure to register your ZIP Code in the Manage Card section.</p>
-
-                  </span></div>
-              </div>
-
-              <div class="columnContent">
-                <div class="bordered">
-                  <div class="text-center icon"><img src="https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/OneV_icons_KnowBalance.png" alt="Know your Balance"></div>
-                  <span class="fontMS font20px24pxlh font-color-darkblue tipSubhead vertical-spacing-bottom-1 font-bold">Know your Balance</span>
-                  <span class="fontPN font15px23pxlh font-color-darkgrey"><p>Merchants cannot determine the balance on your card. So, if you try to purchase an item of greater value than your card balance, your card may be declined.</p>
-
-                  </span></div>
-              </div>
-
-            </div>
-          </div>
         </div>
-      </div>
-
-
     </div>
-  </div>
 </div>
