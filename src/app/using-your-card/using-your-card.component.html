@@ -4,42 +4,29 @@
 
             <div class="body_content_header">
                 <h1 class=" SSH1 fontMS font40px44pxlh font-light">Using Your Card</h1>
-
-
-                <h4 class="fontMS font-bold font18px21pxlh font-color-darkblue">Get the most out of your OneVanilla
-                    Card</h4>
-
-
-                <p>OneVanilla Card is the perfect prepaid card for everyday spending nationwide. Learn how you can use
-                    your card for online shopping, dining out, paying for gas and more.</p>
+                <h4 class="fontMS font-bold font18px21pxlh font-color-darkblue">Get the most out of your OneVanilla Card
+                </h4>
+                <p>OneVanilla Card is the perfect prepaid card for everyday spending nationwide. Learn how you can use your
+                    card for online shopping, dining out, paying for gas and more.</p>
 
                 <div class="col-xs-12 collapse-padding">
-
-
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs UsingYourCard visible-md visible-sm  visible-xs visible-lg" role="tablist">
-                        <li role="presentation"   class="active visible-md visible-sm  visible-xs visible-lg">
-                            <a href="#features" aria-controls="features" role="tab" data-toggle="tab"
-                               class="fontMS font16px24pxlh font-bold">Features</a>
+                        <li role="presentation" class="active visible-md visible-sm  visible-xs visible-lg">
+                            <a href="#features" aria-controls="features" role="tab" data-toggle="tab" class="fontMS font16px24pxlh font-bold">Features</a>
                         </li>
-                        <li role="presentation" class="  visible-md visible-sm visible-xs visible-lg">
-                            <a href="#howtouse" aria-controls="howtouse" role="tab" data-toggle="tab"
-                               class="fontMS font16px24pxlh font-bold">
+                      <li role="presentation" class="  visible-md visible-sm visible-xs visible-lg">
+                            <a href="#howtouse" aria-controls="howtouse" role="tab" data-toggle="tab" class="fontMS font16px24pxlh font-bold">
                                 How to Use</a>
                         </li>
-                        <li role="presentation" class=" visible-md visible-sm  visible-xs visible-lg"><a href="#tips"
-                                                                                                        aria-controls="tips"
-                                                                                                        role="tab"
-                                                                                                        data-toggle="tab"
-                                                                                                        class="fontMS font16px24pxlh font-bold">
-                            Tips</a>
+                        <li role="presentation" class=" visible-md visible-sm  visible-xs visible-lg">
+                            <a href="#tips" aria-controls="tips" role="tab" data-toggle="tab" class="fontMS font16px24pxlh font-bold">
+                                Tips</a>
                         </li>
                     </ul>
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active columns-2 tabFeatures" id="features">
-
-
                             <div *ngFor="let item of $features" class="columnContent">
                                 <div class="bordered">
                                     <div class="text-center icon" style="margin-bottom:12px">
@@ -47,16 +34,19 @@
                                     </div>
                                     <span class="fontPN font15px20pxlh font-color-darkgrey">
                                         <p>{{item.info}}</p>
-                                        <p *ngIf="item.note"><span style="font-size:10px">{{item.note}}</span></p>
+                                        <p *ngIf="item.note">
+                                            <span style="font-size:10px">{{item.note}}</span>
+                                        </p>
                                     </span>
                                 </div>
                             </div>
                         </div>
 
-                        <div role="tabpanel" class="tab-pane tabHowToUse" id="howtouse"><!--Start each HowtoUse box-->
+                        <div role="tabpanel" class="tab-pane tabHowToUse" id="howtouse">
+                            <!--Start each HowtoUse box-->
 
                             <div *ngFor="let item of $howToUse.phone" class="bordered fullwidth">
-                                <div  class="col-md-12 collapse-padding-xs collapse-padding-sm">
+                                <div class="col-md-12 collapse-padding-xs collapse-padding-sm">
                                     <div class="col-md-4 col-xs-12 text-center iconImage">
                                         <h3 *ngIf="item.title" class="title collapse-margin-top fontMS font-bold font13px text-left">{{item.title}}</h3>
 
@@ -66,7 +56,9 @@
                                     </div>
                                     <div class="col-md-8 col-xs-12 collapse-padding-xs collapse-padding-sm vertical-padding-top-1">
                                         <span class="fontMS font20px24pxlh font-bold">{{item.subTitle}}</span>
-                                        <span class="fontPN font15px23pxlh font-color-darkgrey"><p>{{item.info}}</p></span>
+                                        <span class="fontPN font15px23pxlh font-color-darkgrey">
+                                            <p>{{item.info}}</p>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -79,15 +71,17 @@
                                         <h3 *ngIf="item.title" class="title collapse-margin-top fontMS font-bold font13px text-left">
                                             {{item.title}}</h3>
 
-                                        <div class="icon"><img
-                                                src="{{item.img}}"
-                                                alt="{{item.alt}}" border="0"></div>
+                                        <div class="icon">
+                                            <img src="{{item.img}}" alt="{{item.alt}}" border="0">
+                                        </div>
                                     </div>
                                     <div class="col-md-8 col-xs-12 collapse-padding-xs collapse-padding-sm vertical-padding-top-1">
                                         <span class="fontMS font20px24pxlh font-bold">{{item.subTitle}}</span>
                                         <span class="fontPN font15px23pxlh font-color-darkgrey">
                                             <p *ngIf="item.info1">{{item.info1}}</p>
-                                            <p *ngIf="item.info2"><span style="line-height: 1.6em;">{{item.info2}}</span></p>
+                                            <p *ngIf="item.info2">
+                                                <span style="line-height: 1.6em;">{{item.info2}}</span>
+                                            </p>
                                         </span>
                                     </div>
 
@@ -102,13 +96,15 @@
 
                                         <h3 *ngIf="item.title" class="title collapse-margin-top fontMS font-bold font13px text-left">{{item.title}}</h3>
 
-                                        <div class="icon"><img
-                                                src="{{item.img}}"
-                                                alt="{{item.alt}}" border="0"></div>
+                                        <div class="icon">
+                                            <img src="{{item.img}}" alt="{{item.alt}}" border="0">
+                                        </div>
                                     </div>
                                     <div class="col-md-8 col-xs-12 collapse-padding-xs collapse-padding-sm vertical-padding-top-1">
                                         <span class="fontMS font20px24pxlh font-bold">{{item.subTitle}}</span>
-                                        <span class="fontPN font15px23pxlh font-color-darkgrey"><p>{{item.info}}</p></span>
+                                        <span class="fontPN font15px23pxlh font-color-darkgrey">
+                                            <p>{{item.info}}</p>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -118,13 +114,15 @@
 
                             <div *ngFor="let item of $howToUse.online" class="columnContent">
                                 <div class="bordered">
-                                    <div class="text-center icon"><img
-                                            src="{{item.img}}"
-                                            alt="{{item.alt}}"></div>
+                                    <div class="text-center icon">
+                                        <img src="{{item.img}}" alt="{{item.alt}}">
+                                    </div>
                                     <span class="fontMS font20px24pxlh font-color-darkblue tipSubhead vertical-spacing-bottom-1 font-bold">{{item.subTitle}}</span>
                                     <span class="fontPN font15px23pxlh font-color-darkgrey">
                                         <p *ngIf="item.info1">{{item.info1}}</p>
-                                        <p *ngIf="item.info2"><span style="line-height: 1.6em;">{{item.info2}}</span></p>
+                                        <p *ngIf="item.info2">
+                                            <span style="line-height: 1.6em;">{{item.info2}}</span>
+                                        </p>
                                     </span>
                                 </div>
                             </div>
