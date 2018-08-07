@@ -8931,48 +8931,7 @@ div#accordion {
     border-radius: 0px !important;
     box-shadow: none !important; }
 
-.accordionsFAQ {
-    background: #eeeeee;
-    padding: 10px;
-    margin-bottom: 20px;
-    min-width: 105%; }
-.accordionsFAQ h4.title a {
-    background: #eeeeee url(/assets/images/icons/accordion-plus-gray.png) no-repeat 0px 1px;
-    width: 99%;
-    display: block;
-    color: #2398a7;
-    text-decoration: none;
-    padding-left: 20px; }
-    .accordionsFAQ h4.title a {
-        background-image: url(https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/Accordion_Plus.png) !important;
-    }
-    .accordionsFAQ h4.title a[aria-expanded=true] {
-        background-image: url(https://assetscdn.incomm.com/static/onevanilla/images/onevanilla/en/icons/Accordion_Minus.png) !important;
-    }
-.accordionsFAQ h4.title a[aria-expanded="false"] {
-    background: #eeeeee url(/assets/images/icons/accordion-plus-gray.png) no-repeat 0px 1px; }
-.accordionsFAQ h4.title a[aria-expanded="true"] {
-    background: #eeeeee url(/assets/images/icons/accordion-minus-gray.png) no-repeat 0px 1px; }
-.accordionsFAQ h4.title a:hover {
-    text-decoration: none;
-    color: #656565; }
-.accordionsFAQ .panel-default {
-    border-color: transparent; }
-.accordionsFAQ .panel-default > .panel-heading {
-    background-color: transparent;
-    border-color: transparent; }
-.accordionsFAQ .panel-default h4 a {
-    background: transparent url(/assets/images/icons/accordion-plus-gray.png) no-repeat 0px 1px;
-    width: 99%;
-    display: block;
-    text-decoration: none;
-    padding-left: 20px; }
-.accordionsFAQ .panel-default h4 a[aria-expanded="false"] {
-    background: transparent url(/assets/images/icons/accordion-plus-gray.png) no-repeat 0px 1px; }
-.accordionsFAQ .panel-default h4 a[aria-expanded="true"] {
-    background: transparent url(/assets/images/icons/accordion-minus-gray.png) no-repeat 0px 1px; }
-.accordionsFAQ .panel-default h4 a:hover {
-    text-decoration: none; }
+
 
 html[data-useragent*='MSIE 10.0'] .brandCardInfo .SSaccountH4,
 html[data-useragent*='Trident/7.0; rv:11.0'] .brandCardInfo .SSaccountH4 {
