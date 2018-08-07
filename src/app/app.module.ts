@@ -14,8 +14,6 @@ import { FooterComponent } from './footer/footer.component';
 import { AccordionItemComponent } from './accordion-item/accordion-item.component';
 import { FaqAccordionsComponent } from './faq-accordions/faq-accordions.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +26,7 @@ import { FaqAccordionsComponent } from './faq-accordions/faq-accordions.componen
     FooterComponent,
     AccordionItemComponent,
     FaqAccordionsComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     routing,

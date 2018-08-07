@@ -13,6 +13,8 @@ const appRoutes: Routes = [
     {path: 'using-your-card', component: UsingYourCardComponent},
     {path: 'try-my-vanilla', component: TryMyVanillaComponent},
     {path: 'faq', component: FaqComponent},
+    {path: 'test', component: HomeComponent},
+
 
 ];
 //export const routing = RouterModule.forRoot(appRoutes);
